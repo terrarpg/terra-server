@@ -1,0 +1,35 @@
+{
+  "Terra-Survieval-World": {
+    "name": "Terra-Survieval-World",
+    "url": "http://localhost:3000/files?instance=Terra-Survieval-World",
+
+    "loadder": {
+      "minecraft_version": "1.20.4",
+      "loadder_type": "fabric",
+      "loadder_version": "lasted"
+    },
+
+    "verify": true,
+
+    "ignored": [
+      "config",
+      "logs",
+      "resourcepacks",
+      "shaderpacks",
+      "options.txt",
+      "optionsof.txt"
+    ],
+
+    "whitelist": [
+      "WW_DJY",
+      "lubin"
+    ],
+    "whitelistActive": false,
+
+    "status": {
+      "nameServer": "Terra-Survieval-World",
+      "ip": "127.0.0.1",
+      "port": 25565
+    }
+  }
+}

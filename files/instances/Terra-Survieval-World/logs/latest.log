@@ -1,0 +1,26 @@
+[16:07:55] [main/INFO]: Loading Minecraft 1.20.4 with Fabric Loader 0.17.3
+[16:07:55] [main/INFO]: Fabric is preparing JARs on first launch, this may take a few seconds...
+[16:07:56] [main/INFO]: Loading 4 mods:
+	- fabricloader 0.17.3
+	   \-- mixinextras 0.5.0
+	- java 17
+	- minecraft 1.20.4
+[16:07:56] [main/INFO]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/C:/Users/lubin/AppData/Roaming/.tlauncher/legacy/Minecraft/game/libraries/net/fabricmc/sponge-mixin/0.16.5+mixin.0.8.7/sponge-mixin-0.16.5+mixin.0.8.7.jar Service=Knot/Fabric Env=CLIENT
+[16:08:17] [Datafixer Bootstrap/INFO]: 198 Datafixer optimizations took 463 milliseconds
+[16:08:21] [Render thread/INFO]: Environment: Environment[sessionHost=https://account.ely.by/api/authlib-injector/sessionserver, servicesHost=https://account.ely.by/api/mojang/services, name=ELY]
+[16:08:21] [Render thread/INFO]: Setting user: WW-DJY
+[16:08:22] [Render thread/INFO]: Backend library: LWJGL version 3.3.2-snapshot
+[16:08:27] [Render thread/WARN]: Failed to create window: 
+net.minecraft.class_1041$class_4716: GLFW error 65542: WGL: The driver does not appear to support OpenGL
+	at net.minecraft.class_1041.method_4501(class_1041.java:195) ~[client-intermediary.jar:?]
+	at org.lwjgl.glfw.GLFWErrorCallbackI.callback(GLFWErrorCallbackI.java:43) ~[lwjgl-glfw-3.3.2.jar:?]
+	at org.lwjgl.system.JNI.invokePPPP(Native Method) ~[lwjgl-3.3.2.jar:?]
+	at org.lwjgl.glfw.GLFW.nglfwCreateWindow(GLFW.java:2058) ~[lwjgl-glfw-3.3.2.jar:?]
+	at org.lwjgl.glfw.GLFW.glfwCreateWindow(GLFW.java:2229) ~[lwjgl-glfw-3.3.2.jar:?]
+	at net.minecraft.class_1041.<init>(class_1041.java:93) ~[client-intermediary.jar:?]
+	at net.minecraft.class_3682.method_16038(class_3682.java:21) ~[client-intermediary.jar:?]
+	at net.minecraft.class_310.<init>(class_310.java:515) ~[client-intermediary.jar:?]
+	at net.minecraft.client.main.Main.main(Main.java:223) ~[Fabric%201.20.4.jar:?]
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:506) ~[fabric-loader-0.17.3.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:72) ~[fabric-loader-0.17.3.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23) ~[fabric-loader-0.17.3.jar:?]
