@@ -1,14 +1,6 @@
 {
     "maintenance": false,
     "maintenance_message": "Le launcher est en maintenance.<br>Merci de bien vouloir essayer ultérieurement.",
-<<<<<<< HEAD
-    "online": false,
+    "online": "https://terra-survieval-world.azuriom.cloud/user/login",
     "client_id": "13f589e1-e2fc-443e-a68a-63b0092b8eeb",
     "dataDirectory": "Terra-Survival Launcher"
-}
-=======
-    "online": true,
-    "client_id": "13f589e1-e2fc-443e-a68a-63b0092b8eeb",
-    "dataDirectory": "PokeMoonX"
-}
->>>>>>> e6ffae4 (first commit)
