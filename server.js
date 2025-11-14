@@ -3,9 +3,9 @@ const path = require("path");
 const fs = require("fs");
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
-// API /files (obligatoire pour minecraft-java-core)
+// Route API /files pour le launcher
 app.get("/files", (req, res) => {
     const instance = req.query.instance;
 
@@ -23,16 +23,17 @@ app.get("/files", (req, res) => {
 
     function walk(dir) {
         const list = fs.readdirSync(dir);
+
         list.forEach(file => {
             const fullPath = path.join(dir, file);
-            const relative = fullPath.replace(instancePath, "").replace(/\\/g, "/");
+            const relativePath = fullPath.replace(instancePath, "").replace(/\\/g, "/");
 
             if (fs.statSync(fullPath).isDirectory()) {
                 walk(fullPath);
             } else {
                 files.push({
-                    path: relative,
-                    url: `https://terra-server-lfgc.onrender.com/static/${instance}${relative}`
+                    path: relativePath,
+                    url: `https://terra-server-lfgc.onrender.com/static/${instance}${relativePath}`
                 });
             }
         });
@@ -43,9 +44,13 @@ app.get("/files", (req, res) => {
     res.json({ files });
 });
 
-// Fichiers statiques exposés
+// Servir les fichiers Minecraft
 app.use("/static", express.static(path.join(__dirname, "instances")));
 
-app.get("/", (req, res) => res.send("Terra File Server OK — /files API ready"));
+app.get("/", (req, res) => {
+    res.send("Terra File Server OK — API /files opérationnelle");
+});
 
-app.listen(port, () => console.log(`Server running on http://localhost:${port}`));
+app.listen(port, () => {
+    console.log(`File server running on port ${port}`);
+});
