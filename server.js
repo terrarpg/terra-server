@@ -1,27 +1,11 @@
-const express = require("express");
-const path = require("path");
-const fs = require("fs");
 
+const express = require('express');
+const path = require('path');
 const app = express();
-const port = process.env.PORT || 3000;
+const port = 3000;
 
-// =============================
-//  API OBLIGATOIRE POUR LAUNCHER
-// =============================
-app.get("/files", (req, res) => {
-    const instance = req.query.instance;
+app.use('/files', express.static(path.join(__dirname, 'files')));
 
-    if (!instance) {
-        return res.status(400).json({ error: "Missing instance" });
-    }
+app.get('/', (req,res)=>res.send('Terra File Server OK'));
 
-    const instancePath = path.join(__dirname, "instances", instance);
-
-    if (!fs.existsSync(instancePath)) {
-        return res.status(404).json({ error: "Instance not found" });
-    }
-
-    const files = [];
-
-    function walk(dir) {
-        const list = fs.readdirSync(dir);
+app.listen(port, ()=>console.log(`Server running on http://localhost:${port}`));
