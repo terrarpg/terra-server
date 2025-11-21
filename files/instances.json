@@ -4,9 +4,9 @@
     "url": "https://terra-server-lfgc.onrender.com/files?instance=Terra-Survieval-World",
 
     "loadder": {
-      "minecraft_version": "1.20.1",
-      "loadder_type": "Forge",
-      "loadder_version": "47.4.10"
+      "minecraft_version": "1.21.4",
+      "loadder_type": "fabric",
+      "loadder_version": "latest"
     },
 
     "verify": true,
@@ -20,14 +20,13 @@
       "optionsof.txt"
     ],
 
-    "whitelist": [
-      "WW_DJY",
-      "lubin"
+    "whitelist": false,
+    
     ],
     "whitelistActive": false,
 
     "status": {
-      "nameServer": "Terra-Survieval-World",
+      "nameServer": "Terra-Survival-World",
       "ip": "127.0.0.1",
       "port": 25565
     }
