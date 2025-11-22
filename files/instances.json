@@ -1,32 +1,33 @@
 {
-  "Terra-Survieval-World": {
+  "instance": {
     "name": "Terra-Survieval-World",
-    "url": "https://terra-config.onrender.com/files?instance=Terra-Survieval-World",
+    "url": "https://terra-config.onrender.com/files/?instance=Terra-Survieval-World",
 
-    "loadder": {
+    "loader": {
       "minecraft_version": "1.20.4",
-      "loadder_type": "fabric",
-      "loadder_version": "latest"
+      "loader_type": "fabric",
+      "loader_version": "latest"
     },
 
     "verify": true,
 
     "ignored": [
       "config",
-      "logs",
+      "logs", 
       "resourcepacks",
       "shaderpacks",
       "options.txt",
       "optionsof.txt"
     ],
 
-    "whitelist": false,
-    
+    "whitelist": [
+      "WW_DJY",
+      "lubin"
     ],
     "whitelistActive": false,
 
     "status": {
-      "nameServer": "Terra-Survival-World",
+      "nameServer": "Terra-Survival-World", 
       "ip": "127.0.0.1",
       "port": 25565
     }
