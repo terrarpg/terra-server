@@ -27,8 +27,8 @@
     "whitelistActive": false,
 
     "status": {
-      "nameServer": "Terra-Survival-World", 
-      "ip": "127.0.0.1",
+      "nameServer": "Terra-Survival", 
+      "ip": "Play.stelycube.fr",
       "port": 25565
     }
   }
